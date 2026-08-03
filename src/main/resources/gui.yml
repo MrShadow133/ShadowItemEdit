@@ -1,0 +1,163 @@
+# ShadowItemEdit GUI Configuration
+# --------------------------------
+# Actions can be:
+# [OPEN] <menu_id>
+# [COMMAND] <command>
+# [MESSAGE] <text>
+# [CLOSE]
+# [EDIT_NAME]
+# [EDIT_LORE]
+# [EDIT_ENCHANT]
+# [EDIT_ATTRIBUTE]
+# [EDIT_FLAG]
+# [EDIT_DURABILITY]
+# [EDIT_CMD]
+# [EDIT_NBT]
+# [REPAIR]
+# [UNBREAKABLE]
+
+menus:
+  main:
+    title: "<dark_gray>Shadow Item Edit</dark_gray>"
+    rows: 6
+    items:
+      - slot: 10
+        material: NAME_TAG
+        name: "<yellow>Edit Name</yellow>"
+        lore:
+          - "<gray>Click to edit the item's name.</gray>"
+        action: "[EDIT_NAME]"
+      - slot: 11
+        material: BOOK
+        name: "<yellow>Edit Lore</yellow>"
+        lore:
+          - "<gray>Click to edit the item's lore.</gray>"
+        action: "[EDIT_LORE]"
+      - slot: 12
+        material: ENCHANTED_BOOK
+        name: "<yellow>Edit Enchantments</yellow>"
+        lore:
+          - "<gray>Click to edit enchantments.</gray>"
+        action: "[OPEN] enchantments"
+      - slot: 13
+        material: IRON_CHESTPLATE
+        name: "<yellow>Edit Attributes</yellow>"
+        lore:
+          - "<gray>Click to edit attributes.</gray>"
+        action: "[OPEN] attributes"
+      - slot: 14
+        material: WHITE_BANNER
+        name: "<yellow>Edit Flags</yellow>"
+        lore:
+          - "<gray>Click to toggle item flags.</gray>"
+        action: "[OPEN] flags"
+      - slot: 15
+        material: ANVIL
+        name: "<yellow>Repair / Durability</yellow>"
+        lore:
+          - "<gray>Click to edit durability.</gray>"
+        action: "[OPEN] durability"
+      - slot: 16
+        material: OBSIDIAN
+        name: "<yellow>Toggle Unbreakable</yellow>"
+        lore:
+          - "<gray>Click to toggle unbreakable state.</gray>"
+        action: "[UNBREAKABLE]"
+      - slot: 19
+        material: POTION
+        name: "<yellow>Edit Potions</yellow>"
+        lore:
+          - "<gray>Click to edit potion effects.</gray>"
+        action: "[OPEN] potions"
+      - slot: 20
+        material: FIREWORK_ROCKET
+        name: "<yellow>Edit Fireworks</yellow>"
+        lore:
+          - "<gray>Click to edit fireworks.</gray>"
+        action: "[OPEN] fireworks"
+      - slot: 21
+        material: PLAYER_HEAD
+        name: "<yellow>Edit Skull</yellow>"
+        lore:
+          - "<gray>Click to edit skull owner/texture.</gray>"
+        action: "[OPEN] skull"
+      - slot: 22
+        material: WRITABLE_BOOK
+        name: "<yellow>Edit Book</yellow>"
+        lore:
+          - "<gray>Click to edit book contents.</gray>"
+        action: "[OPEN] book"
+      - slot: 23
+        material: FILLED_MAP
+        name: "<yellow>Edit Map</yellow>"
+        lore:
+          - "<gray>Click to edit map settings.</gray>"
+        action: "[OPEN] map"
+      - slot: 24
+        material: COAST_ARMOR_TRIM_SMITHING_TEMPLATE
+        name: "<yellow>Edit Trim</yellow>"
+        lore:
+          - "<gray>Click to edit armor trims.</gray>"
+        action: "[OPEN] trim"
+      - slot: 25
+        material: COMMAND_BLOCK
+        name: "<red>Advanced NBT</red>"
+        lore:
+          - "<gray>Click to edit custom NBT data.</gray>"
+        action: "[OPEN] nbt"
+      - slot: 49
+        material: BARRIER
+        name: "<red>Close</red>"
+        lore: []
+        action: "[CLOSE]"
+
+  enchantments:
+    title: "<dark_gray>Enchantments</dark_gray>"
+    rows: 6
+    # This menu will be populated dynamically, but we can have static buttons
+    items:
+      - slot: 49
+        material: ARROW
+        name: "<green>Back</green>"
+        lore: []
+        action: "[OPEN] main"
+
+  flags:
+    title: "<dark_gray>Item Flags</dark_gray>"
+    rows: 6
+    items:
+      - slot: 49
+        material: ARROW
+        name: "<green>Back</green>"
+        lore: []
+        action: "[OPEN] main"
+
+  durability:
+    title: "<dark_gray>Durability</dark_gray>"
+    rows: 3
+    items:
+      - slot: 11
+        material: ANVIL
+        name: "<green>Repair Item</green>"
+        lore: []
+        action: "[REPAIR]"
+      - slot: 15
+        material: DIAMOND_PICKAXE
+        name: "<yellow>Set Durability</yellow>"
+        lore: []
+        action: "[EDIT_DURABILITY]"
+      - slot: 22
+        material: ARROW
+        name: "<green>Back</green>"
+        lore: []
+        action: "[OPEN] main"
+
+  attributes:
+    title: "<dark_gray>Attributes</dark_gray>"
+    rows: 6
+    items:
+      - slot: 49
+        material: ARROW
+        name: "<green>Back</green>"
+        lore: []
+        action: "[OPEN] main"

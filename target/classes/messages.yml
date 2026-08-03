@@ -1,0 +1,6 @@
+# ShadowItemEdit Messages
+# Use MiniMessage formatting (e.g. <red>, <gradient:blue:aqua>)
+prefix: "<dark_gray>[<gradient:yellow:gold>ShadowIE</gradient>]<gray> "
+no-permission: "<red>You do not have permission to do this.</red>"
+player-only: "<red>Only players can use this command.</red>"
+invalid-item: "<red>You must hold a valid item in your hand.</red>"

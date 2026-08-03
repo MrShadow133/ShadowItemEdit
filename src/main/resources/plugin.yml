@@ -1,0 +1,22 @@
+name: ShadowItemEdit
+version: '${project.version}'
+main: me.shadow.shadowitemedit.ShadowItemEditPlugin
+api-version: '1.21'
+author: 5HAD0Wz
+description: Premium modern alternative to ItemEdit for Paper 1.21+
+depend: [ ]
+softdepend: [ProtocolLib, PlaceholderAPI]
+
+commands:
+  itemedit:
+    description: Main command for ShadowItemEdit
+    aliases: [ie]
+    permission: shadowitemedit.use
+
+permissions:
+  shadowitemedit.use:
+    description: Basic access to the plugin commands
+    default: true
+  shadowitemedit.admin:
+    description: Full access to all plugin features
+    default: op
